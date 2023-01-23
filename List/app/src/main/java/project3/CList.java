@@ -32,6 +32,7 @@ public class CList<T> {
                 break;
             }            
         }
+        size--;
     }
 
     public void displayAll(){
