@@ -13,9 +13,6 @@ public class App {
         list.insertFront("- item01");
         list.insertFront("- item02");
         list.insertFront("- item03");
-        list.insertFront("- item04");
-        list.insertFront("- item05");
-        list.insertFront("- item06");
 
         list.displayAll();
 
@@ -23,9 +20,6 @@ public class App {
         list.insertAfeter("+ item01");
         list.insertAfeter("+ item02");
         list.insertAfeter("+ item03");
-        list.insertAfeter("+ item04");
-        list.insertAfeter("+ item05");
-        list.insertAfeter("+ item06");
 
         list.displayAll();
         

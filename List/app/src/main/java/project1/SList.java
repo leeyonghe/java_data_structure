@@ -43,13 +43,11 @@ public class SList<T> {
     }
 
     public void insertAfeter(T item){
-        Node<T> obj = head;
-        Node<T> endobj = null;
+        Node<T> obj = head;        
         while( obj.getNext() != null){
             obj = obj.getNext();
-        }
-        endobj = obj;
-        endobj.setNext(new Node<T>(item, null));
+        }        
+        obj.setNext(new Node<T>(item, null));
     }
 
     public void deleteAfeter(Node<T> p){
@@ -67,6 +65,21 @@ public class SList<T> {
         }while((obj = obj.getNext()) != null);
         System.out.println("Total result : "+result);
         System.out.println("Total count : "+size);
+    }
+
+    public Node<T> getNode(int index){
+        Node<T> result = null;
+        Node<T> obj = head;
+        int i = 0;
+        do{
+            if (++i == index) {
+                result = obj;
+                break;
+            }
+
+        }while((obj = obj.getNext()) != null);
+
+        return result;
     }
     
 }
