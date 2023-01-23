@@ -3,8 +3,6 @@
  */
 package project;
 
-import java.util.ArrayList;
-
 public class App {
 
     public static void main(String[] args) {
@@ -30,6 +28,7 @@ public class App {
         list2.insertLast(5);
         list2.displayAll();
         list2.removeAll();
+        
     }
 
 }
