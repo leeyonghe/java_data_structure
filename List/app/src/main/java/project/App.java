@@ -7,14 +7,14 @@ public class App {
 
     public static void main(String[] args) {
         
-        ArrList<NObject> list = new ArrList<NObject>();
-        list.insertLast(new NObject("Obj01"));
-        list.insertLast(new NObject("Obj02"));        
+        ArrList<String> list = new ArrList<String>();
+        list.insertLast(new String("Obj01"));
+        list.insertLast(new String("Obj02"));        
         list.delete(2);
-        list.insertLast(new NObject("Obj03"));
-        list.insertLast(new NObject("Obj04"));
+        list.insertLast(new String("Obj03"));
+        list.insertLast(new String("Obj04"));
         list.delete(2);
-        list.insertLast(new NObject("Obj05"));
+        list.insertLast(new String("Obj05"));
         list.displayAll();
 
     }
