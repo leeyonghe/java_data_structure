@@ -6,7 +6,29 @@ package project1;
 public class App {
 
     public static void main(String[] args) {
-                
+
+        SList<String> list = new SList<String>();
+
+        list.insertFront("- item00");
+        list.insertFront("- item01");
+        list.insertFront("- item02");
+        list.insertFront("- item03");
+        list.insertFront("- item04");
+        list.insertFront("- item05");
+        list.insertFront("- item06");
+
+        list.displayAll();
+
+        list.insertAfeter("+ item00");
+        list.insertAfeter("+ item01");
+        list.insertAfeter("+ item02");
+        list.insertAfeter("+ item03");
+        list.insertAfeter("+ item04");
+        list.insertAfeter("+ item05");
+        list.insertAfeter("+ item06");
+
+        list.displayAll();
+        
     }
 
 }

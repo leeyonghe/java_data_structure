@@ -27,6 +27,46 @@ public class SList<T> {
         return null;
     }
 
-    
+    public void insertFront(T item){
+        head = new Node<T>(item, head);
+        size++;
+    }
+
+    public void insertAfter(T item, Node<T> p){
+        p.setNext(new Node<T>(item, p.getNext()));
+        size--;
+    }
+
+    public void deleteFront(){
+        this.head = this.head.getNext();
+        this.size--;
+    }
+
+    public void insertAfeter(T item){
+        Node<T> obj = head;
+        Node<T> endobj = null;
+        while( obj.getNext() != null){
+            obj = obj.getNext();
+        }
+        endobj = obj;
+        endobj.setNext(new Node<T>(item, null));
+    }
+
+    public void deleteAfeter(Node<T> p){
+        Node<T> t = p.getNext();
+        p.setNext(t.getNext());
+        t.setNext(null);
+        size--;
+    }
+
+    public void displayAll() {
+        String result = "";
+        Node<T> obj = head;
+        do{
+            result += obj.getItem().toString()+" | ";
+        }while((obj = obj.getNext()) != null);
+        System.out.println("Total result : "+result);
+        System.out.println("Total count : "+size);
+    }
     
 }
