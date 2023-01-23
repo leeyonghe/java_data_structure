@@ -10,8 +10,8 @@ public class ArrList<T> {
      * 
      */
     public ArrList(){
-        array = (T[]) new NObject[1];
-        array[0] = (T) new NObject("Obj00");
+        array = (T[]) new Object[1];
+        array[0] = (T) new Object();
     }
 
     /**
@@ -51,7 +51,11 @@ public class ArrList<T> {
      */
     public void insertLast(T item){
         resizeOneByOne(RESIZE_TYPE.PLUS);
-        array[array.length-1] = item;
+        try {
+            array[array.length-1] = item;
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
 
     /**
@@ -78,18 +82,18 @@ public class ArrList<T> {
         switch(type){
             case PLUS:{
                 int totalcount = array.length+1;
-                NObject[] temp = new NObject[totalcount];
+                Object[] temp = new Object[totalcount];
                 for (int i = 0; i < array.length; i++) {
-                    temp[i] = (NObject) array[i];
+                    temp[i] = (Object) array[i];
                 }
                 array = null;
                 array = (T[]) temp;
             }break;
             case MINUS:{
                 int totalcount = array.length-1;
-                NObject[] temp = new NObject[totalcount];
+                Object[] temp = new Object[totalcount];
                 for (int i = 0; i < temp.length; i++) {
-                    temp[i] = (NObject) array[i];
+                    temp[i] = (Object) array[i];
                 }
                 array = null;
                 array = (T[]) temp;
@@ -102,7 +106,11 @@ public class ArrList<T> {
      */
     public void displayAll(){
         for (int i = 0; i < array.length; i++) {
-            System.out.println(((NObject)array[i]).getName());
+            Object obj = array[i];
+            if (obj instanceof String) {
+                System.out.println(obj.toString());
+            }
+            
         }
     }
 
