@@ -36,6 +36,7 @@ public class ArrList<T> {
         }
 
         resizeOneByOne(RESIZE_TYPE.PLUS);
+        
         for (int i = array.length-1; i >= 0  ; i--) {
             if (i >= index) {
                 array[i] = array[i-1];
@@ -63,7 +64,7 @@ public class ArrList<T> {
      */
     public void delete(int index){
 
-        if (index >= array.length) {
+        if (array.length == 0 && index >= array.length) {
             throw new IndexOutOfBoundsException();
         }
 
@@ -108,11 +109,21 @@ public class ArrList<T> {
         for (int i = 0; i < array.length; i++) {
             Object obj = array[i];
             if (obj instanceof String) {
-                System.out.println(obj.toString());
+                System.out.println("String Type");
+            }else if(obj instanceof Integer){
+                System.out.println("Integer Type");
+            }else{
+                System.out.println("Other Type");
             }
-            
+            System.out.println(obj.toString());
         }
     }
 
+    public void removeAll(){
+        for (T t : array) {
+            t = null;
+        }
+        array = null;
+    }
 
 }

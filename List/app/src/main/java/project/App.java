@@ -3,6 +3,8 @@
  */
 package project;
 
+import java.util.ArrayList;
+
 public class App {
 
     public static void main(String[] args) {
@@ -16,7 +18,18 @@ public class App {
         list.delete(2);
         list.insertLast(new String("Obj05"));
         list.displayAll();
+        list.removeAll();
 
+        ArrList<Integer> list2 = new ArrList<Integer>();
+        list2.insertLast(1);
+        list2.insertLast(2);
+        list2.delete(2);
+        list2.insertLast(3);
+        list2.insertLast(4);
+        list2.delete(2);
+        list2.insertLast(5);
+        list2.displayAll();
+        list2.removeAll();
     }
 
 }
