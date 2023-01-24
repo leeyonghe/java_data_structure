@@ -2,5 +2,5 @@
 - 개발환경
   - VS Code [https://code.visualstudio.com]
 - 순서
-  - List : 리스트
-  - StackNQueue : 스택 & 큐
+  - List : 리스트 :+1:
+  - StackNQueue : 스택 & 큐 :+1:
